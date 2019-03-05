@@ -1,0 +1,24 @@
+{
+  "name": "using-wasm-poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "serve",
+    "compile": "emcc main.c -s SIDE_MODULE=1 -O1 -s EXPORTED_FUNCTIONS='[\"_test\"]' -s WASM=1 -o main.wasm",
+    "environmentVariables": "source ./../emsdk/emsdk_env.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shulamyt/using-wasm-poc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shulamyt/using-wasm-poc/issues"
+  },
+  "homepage": "https://github.com/shulamyt/using-wasm-poc#readme",
+  "devDependencies": {
+    "serve": "^10.1.2"
+  }
+}
